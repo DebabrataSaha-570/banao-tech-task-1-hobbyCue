@@ -6,8 +6,8 @@ import JoinIn from "../Authentication/JoinIn";
 const HeroRightPart = () => {
   return (
     <div className="">
-      <Tabs defaultValue="Sign In" className="w-[400px]">
-        <TabsList>
+      <Tabs defaultValue="Sign In" className="text-center md:text-left">
+        <TabsList className="">
           <TabsTrigger value="Sign In">Sign In</TabsTrigger>
           <TabsTrigger value="Join In">Join In</TabsTrigger>
         </TabsList>
