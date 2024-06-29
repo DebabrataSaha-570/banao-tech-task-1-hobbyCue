@@ -1,5 +1,6 @@
 import React from "react";
 import { IconType } from "react-icons";
+import PrimaryButton from "../PrimaryButton";
 type TResource = {
   id: number;
   title: string;
@@ -21,9 +22,11 @@ const HobbySingleResource = ({ resource }: { resource: TResource }) => {
         {resource.description}
       </p>
 
-      <button className="w-full  md:w-32 border border-[#8064A2] rounded-lg p-2 text-[#8064A2] text-xs md:text-sm font-semibold">
+      {/* <button className="w-full  md:w-32 border border-[#8064A2] rounded-lg p-2 text-[#8064A2] hover:bg-[#8064A2] transition-all duration-300 hover:text-white text-xs md:text-sm font-semibold">
         {resource.buttonText}
-      </button>
+      </button> */}
+
+      <PrimaryButton> {resource.buttonText} </PrimaryButton>
     </div>
   );
 };
