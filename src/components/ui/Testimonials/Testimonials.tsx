@@ -8,7 +8,7 @@ import personImage from "../../../../public/assests/testimonial_person.svg";
 
 const Testimonials = () => {
   return (
-    <section className="py-10">
+    <section className="py-10 mb-5">
       <Container>
         <div className="bg-[#F7F5F9] p-10 rounded-lg space-y-9">
           <h3 className="flex items-center text-2xl font-semibold gap-4">
@@ -51,7 +51,7 @@ const Testimonials = () => {
                 // width={100}
                 // height={100}
                 alt="person_image"
-                className="w-[60px] md:w-[100px] h-[60px] md:h-[100px] object-cover"
+                className="w-[60px] md:w-[90px] h-[60px] md:h-[90px] object-cover"
               ></Image>
 
               <div>

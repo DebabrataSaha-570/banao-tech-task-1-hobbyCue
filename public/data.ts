@@ -1,6 +1,8 @@
 import { FaUsers } from "react-icons/fa";
 import { FaLocationDot, FaCalendarCheck } from "react-icons/fa6";
 import { HiShoppingBag } from "react-icons/hi2";
+import SignIn from "@/components/ui/Authentication/SignIn";
+import JoinIn from "@/components/ui/Authentication/JoinIn";
 export const resourcesData = [
   {
     id: 1,
@@ -38,5 +40,16 @@ export const resourcesData = [
     buttonText: "Attend",
     icon: FaCalendarCheck,
     color: "#0096C8",
+  },
+];
+
+export const heroMenuItems = [
+  {
+    title: "Sign In",
+    component: SignIn,
+  },
+  {
+    title: "Join In",
+    component: JoinIn,
   },
 ];
