@@ -28,14 +28,14 @@ const Navbar = () => {
         <div className="flex items-center">
           <Image
             src={logo}
-            className="w-[176px] h-[42px] md:w-[290px] md:h-[60px]"
+            className="w-[176px] h-[42px] md:w-[220px] lg:w-[290px] md:h-[60px]"
             alt="logo"
           ></Image>
           {/* <Image src={logo}  width={293} height={60} alt="logo"></Image> */}
 
           <form className="hidden md:hidden lg:flex mx-5">
             <input
-              className="border w-[250px] border-gray-300 focus:outline-none bg-[#EBEDF0] rounded-l-lg px-3 py-2 placeholder:text-sm "
+              className="border md:max-w-[200px] lg:max-w-[230px] border-gray-300 focus:outline-none bg-[#EBEDF0] rounded-l-lg px-3 py-2 placeholder:text-sm "
               type="text"
               placeholder="Search here.."
             />

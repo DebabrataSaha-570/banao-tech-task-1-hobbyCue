@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import Container from "../Container";
 import hobbyImage from "../../../../public/assests/your_hobby_img.svg";
 import Image from "next/image";
@@ -19,13 +21,25 @@ const YourHobby = () => {
           </button>
         </div>
 
-        <div className="mt-14">
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 1,
+          }}
+          className="mt-14"
+        >
           <Image
             src={hobbyImage}
             style={{ width: "100%", height: "25%" }}
             alt="hobby_image"
           ></Image>
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

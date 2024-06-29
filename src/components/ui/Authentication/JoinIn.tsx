@@ -50,8 +50,8 @@ const JoinIn = () => {
         />
 
         <p className="text-xs w-full text-[#6D747A]">
-          By continuing, you agree to our{" "}
-          <span className="text-black">Terms of Service</span> and
+          By continuing, you agree to our
+          <span className="text-black"> Terms </span>and
           <span className="text-black"> Privacy Policy</span>.
         </p>
 

@@ -27,7 +27,6 @@ const BackToTopBtn = () => {
         className=" w-[35px] h-[35px] bg-[#8064A2] hover:bg-tertiary text-white rounded-full fixed right-[20px] bottom-[20px] cursor-pointer flex justify-center items-center transition-all"
       >
         {" "}
-        {/* <ChevronUpIcon className="w-[18px] h-[18px]"></ChevronUpIcon>{" "} */}
         <IoIosArrowUp className="w-[18px] h-[18px]" />
       </button>
     )

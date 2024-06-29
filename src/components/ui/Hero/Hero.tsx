@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import Container from "../Container";
 import HeroLeftPart from "./HeroLeftPart";
 import HeroRightPart from "./HeroRightPart";
@@ -10,17 +12,53 @@ const Hero = () => {
       <Container>
         <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* left  */}
-          <div className="col-span-1 md:col-span-1 lg:col-span-2">
+          <motion.div
+            initial={{ x: -100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.2,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="col-span-1 md:col-span-1 lg:col-span-2"
+          >
             <HeroLeftPart></HeroLeftPart>
-          </div>
+          </motion.div>
 
           {/* right  */}
 
-          <div className="col-span-1">
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.4,
+              x: { type: "spring", stiffness: 60 },
+              opacity: { duration: 1 },
+              ease: "easeIn",
+              duration: 1,
+            }}
+            className="col-span-1"
+          >
             <HeroRightPart></HeroRightPart>
-          </div>
+          </motion.div>
         </div>
-        <div className="">
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.2,
+            x: { type: "spring", stiffness: 60 },
+            opacity: { duration: 1 },
+            ease: "easeIn",
+            duration: 1,
+          }}
+          className=""
+        >
           <Image
             src={heroImage}
             width={697}
@@ -29,7 +67,7 @@ const Hero = () => {
             alt="hero Image"
             className="mt-7 lg:mt-[-40px] "
           ></Image>
-        </div>
+        </motion.div>
       </Container>
     </section>
   );

@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import Container from "../Container";
 import { resourcesData } from "../../../../public/data";
 import HobbySingleResource from "./HobbySingleResource";
@@ -9,8 +11,8 @@ const HobbyResources = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {resourcesData.map((resource, index) => (
           <HobbySingleResource
-            resource={resource}
             key={index}
+            resource={resource}
           ></HobbySingleResource>
         ))}
       </div>

@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 import Container from "../Container";
 import { FaCirclePlus } from "react-icons/fa6";
 import PrimaryButton from "../PrimaryButton";
@@ -7,7 +9,19 @@ const AddYourOwn = () => {
   return (
     <section className="bg-[#F7FDFF] py-14 my-10">
       <Container>
-        <div className="border border-[#CED4DA] rounded-lg p-7">
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.4,
+            y: { type: "spring", stiffness: 60 },
+            opacity: { duration: 0.2 },
+            ease: "easeIn",
+            duration: 1,
+          }}
+          className="border border-[#CED4DA] rounded-lg p-7"
+        >
           <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold">
             {" "}
             <span>
@@ -23,7 +37,7 @@ const AddYourOwn = () => {
           </p>
 
           <PrimaryButton> Add new </PrimaryButton>
-        </div>
+        </motion.div>
       </Container>
     </section>
   );
