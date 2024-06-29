@@ -9,7 +9,7 @@ export default function Home() {
       {/* <Navbar></Navbar> */}
       <HobbyResources></HobbyResources>
       <AddYourOwn></AddYourOwn>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </main>
   );
 }
