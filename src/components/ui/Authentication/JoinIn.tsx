@@ -57,9 +57,9 @@ const JoinIn = () => {
 
         <button
           type="submit"
-          className="px-4 py-2 border w-full border-[#8064A2]  font-semibold rounded-lg mt-4 hover:bg-[#8064A2]  hover:text-white transition-all duration-300 text-sm md:text-base"
+          className="px-4 py-2 border w-full border-[#8064A2]  font-semibold rounded-lg mt-4 bg-[#8064A2] text-white transition-all duration-300 text-sm md:text-base"
         >
-          Continue
+          Agree and Continue
         </button>
       </form>
     </div>
