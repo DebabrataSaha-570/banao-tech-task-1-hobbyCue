@@ -23,57 +23,57 @@ const Footer = () => {
             <div className="text-sm md:text-base">
               <h2 className=" font-bold mb-3">Hobbycue</h2>
 
-              <Link className="block font-normal mb-2" href="/">
+              <Link className="block font-light mb-2" href="/">
                 About Us
               </Link>
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 Our Services
               </Link>
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 Work with us
               </Link>
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 FAQ
               </Link>
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 Contact Us
               </Link>
             </div>
             <div className="text-sm md:text-base">
               <h2 className=" font-bold mb-3">How Do I</h2>
 
-              <Link className="block font-normal mb-2" href="/">
+              <Link className="block font-light mb-2" href="/">
                 Sign Up
               </Link>
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 Add a listing
               </Link>
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 Claim Listing
               </Link>
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 Post a Query
               </Link>
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 Add a Blog Post
               </Link>
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 Other Queries
               </Link>
             </div>
             <div className="text-sm md:text-base">
               <h2 className=" font-bold mb-3">Quick Links</h2>
 
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 Listing
               </Link>
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 Blog Posts
               </Link>
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 Shop / Store
               </Link>
-              <Link className="block  font-normal mb-2" href="/">
+              <Link className="block  font-light mb-2" href="/">
                 Community
               </Link>
             </div>

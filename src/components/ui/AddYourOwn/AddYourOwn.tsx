@@ -22,7 +22,7 @@ const AddYourOwn = () => {
           }}
           className="border border-[#CED4DA] rounded-lg p-7"
         >
-          <h2 className="flex items-center gap-3 text-xl md:text-2xl font-semibold">
+          <h2 className="flex items-center gap-3 text-xl md:text-xl font-semibold">
             {" "}
             <span>
               <FaCirclePlus className="text-[#0096C8]" />
@@ -30,7 +30,7 @@ const AddYourOwn = () => {
             Add your own
           </h2>
 
-          <p className="text-sm md:text-lg font-light my-5">
+          <p className="text-sm md:text-base font-light my-5">
             Are you a teacher or expert? Do you sell or rent out equipment,
             venue or event tickets? Or, you know someone who should be on
             hobbycue? Go ahead and Add your Own page

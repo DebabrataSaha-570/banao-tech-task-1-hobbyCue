@@ -13,12 +13,12 @@ type TResource = {
 const HobbySingleResource = ({ resource }: { resource: TResource }) => {
   return (
     <div className="border flex flex-col items-center md:items-start  justify-between   border-[#CED4DA] rounded-lg p-5">
-      <h2 className="text-xl md:text-2xl flex items-center gap-3 font-semibold">
+      <h2 className="text-xl md:text-xl flex items-center gap-3 font-semibold">
         {" "}
         <resource.icon style={{ color: resource.color }} /> {resource.title}
       </h2>
 
-      <p className="text-sm md:text-lg my-5 font-light">
+      <p className="text-sm md:text-base my-5 font-light">
         {resource.description}
       </p>
 

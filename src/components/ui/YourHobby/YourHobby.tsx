@@ -16,7 +16,7 @@ const YourHobby = () => {
             <span className="text-[#0096C8]">Community ...</span>{" "}
           </h2>
 
-          <button className="text-sm md:text-lg bg-[#8064A2] font-semibold text-white px-4 py-2 rounded-lg mt-5">
+          <button className="text-sm md:text-base bg-[#8064A2] font-semibold text-white px-4 py-2 rounded-lg mt-5">
             Get Started
           </button>
         </div>

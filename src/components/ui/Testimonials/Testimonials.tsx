@@ -11,14 +11,14 @@ const Testimonials = () => {
     <section className="py-10 mb-5">
       <Container>
         <div className="bg-[#F7F5F9] p-10 rounded-lg space-y-9">
-          <h3 className="flex items-center text-2xl font-semibold gap-4">
+          <h3 className="flex items-center text-xl font-semibold gap-4">
             <span className="p-3 bg-[#8064A2] rounded-full text-white">
               <BiSolidQuoteAltLeft />
             </span>{" "}
             Testimonials{" "}
           </h3>
 
-          <p className="text-[#6D747A] text-lg font-light">
+          <p className="text-[#6D747A] font-light text-sm  md:text-base">
             In a fast growing and ever changing city like Bangalore, it
             sometimes becomes very difficult to find or connect with like minded
             people. Websites like hobbycue.com is a great service which helps me
@@ -55,7 +55,7 @@ const Testimonials = () => {
               ></Image>
 
               <div>
-                <h4 className="text-lg text-[#8064A2] font-semibold">
+                <h4 className=" text-base text-[#8064A2] font-semibold">
                   Subha Nagarajan
                 </h4>
                 <h5 className="text-sm font-normal text-[#0096C8]">
