@@ -4,10 +4,17 @@ import { motion } from "framer-motion";
 import Container from "../Container";
 import hobbyImage from "../../../../public/assests/your_hobby_img.svg";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const YourHobby = () => {
+  const { theme, setTheme } = useTheme();
+
   return (
-    <section className="bg-[#F7FDFF] pt-14 pb-5">
+    <section
+      className={`${
+        theme === "dark" ? "bg-foreground" : "bg-[#F7FDFF]"
+      }  pt-14 pb-5`}
+    >
       <Container>
         <div>
           <h2 className="italic text-lg md:text-4xl font-normal">

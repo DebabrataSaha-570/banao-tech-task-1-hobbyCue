@@ -85,4 +85,15 @@
     background: #8064a2 !important;
     border-radius: 5px;
   }
+
+  :root {
+    /* Your default theme */
+    --background: white;
+    --foreground: black;
+  }
+
+  [data-theme="dark"] {
+    --background: black;
+    --foreground: white;
+  }
 }

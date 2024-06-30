@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../ui/Container";
 
 import logo from "../../../public/assests/hobby_cue_logo.svg";
@@ -8,34 +8,47 @@ import {
   FaBell,
   FaBookmark,
   FaCompass,
+  FaMoon,
   FaSearch,
   FaShoppingCart,
+  FaSun,
 } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { GiHamburgerMenu, GiSevenPointedStar } from "react-icons/gi";
 import PrimaryButton from "../ui/PrimaryButton";
 import { RxCross2 } from "react-icons/rx";
+import { useTheme } from "next-themes";
+import { IoIosSunny } from "react-icons/io";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const handleClick = () => {
     setNavOpen(!navOpen);
   };
   return (
-    <nav className="py-2 shadow sticky top-0 bg-white">
+    <nav
+      className={`py-2 shadow sticky top-0 ${
+        theme === "dark" ? "bg-gray-800" : "bg-white"
+      } `}
+    >
       <Container className="flex  items-center justify-between">
         <div className="flex items-center">
           <Image
             src={logo}
-            className="w-[176px] h-[42px] md:w-[220px] lg:w-[290px] md:h-[60px]"
+            className={`w-[176px] h-[42px] md:w-[220px] lg:w-[290px] md:h-[60px] ${
+              theme === "dark" ? "mix-blend-soft-light" : ""
+            }`}
             alt="logo"
           ></Image>
           {/* <Image src={logo}  width={293} height={60} alt="logo"></Image> */}
 
           <form className="hidden md:hidden lg:flex mx-5">
             <input
-              className="border md:max-w-[200px] lg:max-w-[230px] border-gray-300 focus:outline-none bg-[#EBEDF0] rounded-l-lg px-3 py-2 placeholder:text-sm "
+              className={`border md:max-w-[200px] lg:max-w-[230px] border-gray-300 focus:outline-none ${
+                theme === "dark" ? "bg-transparent" : "bg-[#EBEDF0]"
+              }  rounded-l-lg px-3 py-2 placeholder:text-sm `}
               type="text"
               placeholder="Search here.."
             />
@@ -80,6 +93,21 @@ const Navbar = () => {
               <FaShoppingCart className="text-[#8064A2]" />
             </span>
           </p>
+          <p className="text-xl">
+            {theme === "dark" && (
+              <span
+                onClick={() => setTheme("light")}
+                className="cursor-pointer"
+              >
+                <FaSun className="text-[#8064A2]" />
+              </span>
+            )}
+            {theme === "light" && (
+              <span onClick={() => setTheme("dark")} className="cursor-pointer">
+                <FaMoon className="text-[#8064A2]" />
+              </span>
+            )}
+          </p>
           <PrimaryButton>Sign In</PrimaryButton>
         </div>
 
@@ -95,6 +123,21 @@ const Navbar = () => {
             <span>
               <FaBell className="text-[#8064A2]" />
             </span>
+          </p>
+          <p className="text-xl">
+            {theme === "dark" && (
+              <span
+                onClick={() => setTheme("light")}
+                className="cursor-pointer"
+              >
+                <FaSun className="text-[#8064A2]" />
+              </span>
+            )}
+            {theme === "light" && (
+              <span onClick={() => setTheme("dark")} className="cursor-pointer">
+                <FaMoon className="text-[#8064A2]" />
+              </span>
+            )}
           </p>
           <p className="text-xl cursor-pointer">
             {!navOpen ? (
@@ -115,10 +158,14 @@ const Navbar = () => {
           className={`${
             !navOpen
               ? "hidden"
-              : "absolute top-[60px] md:top-[65px] left-0 transition-all duration-500 h-screen w-full flex flex-col justify-center items-center bg-gray-200 lg:hidden p-5 space-y-4"
-          }`}
+              : "absolute top-[58px] md:top-[65px] left-0 transition-all duration-500 h-screen w-full flex flex-col justify-center items-center   lg:hidden p-5 space-y-4"
+          } ${theme === "dark" ? "bg-gray-800" : "bg-gray-200"}`}
         >
-          <p className="flex items-center justify-center gap-2 text-base font-medium  w-full hover:bg-gray-300 py-2 rounded-lg cursor-pointer">
+          <p
+            className={`flex items-center justify-center gap-2 text-base font-medium  w-full ${
+              theme === "dark" ? "hover:bg-gray-600" : "hover:bg-gray-300"
+            }  py-2 rounded-lg cursor-pointer`}
+          >
             <span className="text-[#8064A2]">
               <FaCompass className="text-base" />
             </span>
@@ -127,7 +174,11 @@ const Navbar = () => {
               <MdKeyboardArrowDown className="text-lg" />
             </span>
           </p>
-          <p className="flex items-center justify-center gap-2 text-base font-medium w-full hover:bg-gray-300 py-2 rounded-lg cursor-pointer">
+          <p
+            className={`flex items-center justify-center gap-2 text-base font-medium  w-full ${
+              theme === "dark" ? "hover:bg-gray-600" : "hover:bg-gray-300"
+            }  py-2 rounded-lg cursor-pointer`}
+          >
             <span className="text-[#8064A2]">
               <GiSevenPointedStar className="text-base" />
             </span>
@@ -137,19 +188,31 @@ const Navbar = () => {
             </span>
           </p>
 
-          <p className="text-base flex justify-center items-center font-medium gap-2 w-full hover:bg-gray-300 py-2 rounded-lg cursor-pointer">
+          <p
+            className={`flex items-center justify-center gap-2 text-base font-medium  w-full ${
+              theme === "dark" ? "hover:bg-gray-600" : "hover:bg-gray-300"
+            }  py-2 rounded-lg cursor-pointer`}
+          >
             <span>
               <FaBookmark className="text-[#8064A2]" />
             </span>
             Book Marks
           </p>
-          <p className="text-base flex justify-center items-center gap-2 w-full hover:bg-gray-300 py-2 rounded-lg cursor-pointer">
+          <p
+            className={`flex items-center justify-center gap-2 text-base font-medium  w-full ${
+              theme === "dark" ? "hover:bg-gray-600" : "hover:bg-gray-300"
+            }  py-2 rounded-lg cursor-pointer`}
+          >
             <span>
               <FaBell className="text-[#8064A2] text-lg" />
             </span>
             Notifications
           </p>
-          <p className="text-lg flex justify-center items-center gap-2 w-full hover:bg-gray-300 py-2 rounded-lg cursor-pointer">
+          <p
+            className={`flex items-center justify-center gap-2 text-base font-medium  w-full ${
+              theme === "dark" ? "hover:bg-gray-600" : "hover:bg-gray-300"
+            }  py-2 rounded-lg cursor-pointer`}
+          >
             <span>
               <FaShoppingCart className="text-[#8064A2]" />
             </span>

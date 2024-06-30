@@ -5,12 +5,20 @@ import Image from "next/image";
 
 import audioImage from "../../../../public/assests/audio_track.svg";
 import personImage from "../../../../public/assests/testimonial_person.svg";
+import { useTheme } from "next-themes";
 
 const Testimonials = () => {
+  const { theme, setTheme } = useTheme();
+
   return (
     <section className="py-10 mb-5">
       <Container>
-        <div className="bg-[#F7F5F9] p-10 rounded-lg space-y-9">
+        <div
+          // className={` bg-[#F7F5F9]  p-10 rounded-lg space-y-9`}
+          className={`${
+            theme === "dark" ? "bg-gray-800" : "bg-[#F7F5F9]"
+          }  p-10 rounded-lg space-y-9`}
+        >
           <h3 className="flex items-center text-xl font-semibold gap-4">
             <span className="p-3 bg-[#8064A2] rounded-full text-white">
               <BiSolidQuoteAltLeft />

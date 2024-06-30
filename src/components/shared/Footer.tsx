@@ -114,7 +114,7 @@ const Footer = () => {
 
                 <div className="flex ">
                   <input
-                    className="border w-full border-[#8064A2] rounded-l-lg px-4 py-2 placeholder:text-sm "
+                    className="border w-full border-[#8064A2] rounded-l-lg px-4 py-2 placeholder:text-sm  focus:outline-none"
                     type="text"
                     placeholder="Email ID"
                   />

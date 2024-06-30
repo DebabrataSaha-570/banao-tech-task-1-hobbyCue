@@ -1,14 +1,21 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Container from "../Container";
 import HeroLeftPart from "./HeroLeftPart";
 import HeroRightPart from "./HeroRightPart";
 import Image from "next/image";
 import heroImage from "../../../../public/assests/hero_image.svg";
+import { useTheme } from "next-themes";
 const Hero = () => {
+  const { theme, setTheme } = useTheme();
+
   return (
-    <section className="bg-[#F7F5F9] pt-16">
+    <section
+      className={`${
+        theme === "dark" ? "bg-foreground" : "bg-[#F7F5F9]"
+      }  pt-16`}
+    >
       <Container>
         <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* left  */}

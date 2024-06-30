@@ -4,10 +4,16 @@ import { motion } from "framer-motion";
 import Container from "../Container";
 import { FaCirclePlus } from "react-icons/fa6";
 import PrimaryButton from "../PrimaryButton";
+import { useTheme } from "next-themes";
 
 const AddYourOwn = () => {
+  const { theme, setTheme } = useTheme();
   return (
-    <section className="bg-[#F7FDFF] py-14 my-10">
+    <section
+      className={`${
+        theme === "dark" ? "bg-foreground" : "bg-[#F7FDFF]"
+      }  py-14 my-10`}
+    >
       <Container>
         <motion.div
           initial={{ y: 50, opacity: 0 }}

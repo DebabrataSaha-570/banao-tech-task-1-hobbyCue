@@ -4,8 +4,11 @@ import React, { FormEvent, ReactNode } from "react";
 import facebookImage from "../../../../public/assests/Facebook.svg";
 import googleImage from "../../../../public/assests/Google.svg";
 import { MdLock } from "react-icons/md";
+import { useTheme } from "next-themes";
 
 const JoinIn = () => {
+  const { theme, setTheme } = useTheme();
+
   const handleJoinIn = (e: FormEvent) => {
     e.preventDefault();
     alert("Authentication feature coming sooooon!");
@@ -13,12 +16,12 @@ const JoinIn = () => {
   return (
     <div className="px-1 mt-5 flex flex-col">
       <div className="order-3 md:order-1">
-        <button className="flex items-center  text-[#08090A] px-4 py-2 border w-full border-[#8064A2] hover:bg-[#8064A2]  hover:text-white transition-all duration-300 rounded-lg text-sm md:text-base">
+        <button className="flex items-center   px-4 py-2 border w-full border-[#8064A2] hover:bg-[#8064A2]  hover:text-white transition-all duration-300 rounded-lg text-sm md:text-base">
           <Image src={googleImage} className="w-4 " alt="google_image"></Image>
           <h4 className=" font-semibold mx-auto">Continue with Google</h4>
         </button>
 
-        <button className="flex items-center text-[#08090A]   px-4 py-2 border w-full border-[#8064A2]  hover:bg-[#8064A2]  hover:text-white transition-all duration-300 rounded-lg mt-4 text-sm md:text-base">
+        <button className="flex items-center    px-4 py-2 border w-full border-[#8064A2]  hover:bg-[#8064A2]  hover:text-white transition-all duration-300 rounded-lg mt-4 text-sm md:text-base">
           <Image
             src={facebookImage}
             className="w-4 "
@@ -51,8 +54,20 @@ const JoinIn = () => {
 
         <p className="text-xs w-full text-[#6D747A]">
           By continuing, you agree to our
-          <span className="text-black"> Terms </span>and
-          <span className="text-black"> Privacy Policy</span>.
+          <span
+            className={`${theme === "dark" ? "text-white" : "text-black"} `}
+          >
+            {" "}
+            Terms{" "}
+          </span>
+          and
+          <span
+            className={`${theme === "dark" ? "text-white" : "text-black"} `}
+          >
+            {" "}
+            Privacy Policy
+          </span>
+          .
         </p>
 
         <button

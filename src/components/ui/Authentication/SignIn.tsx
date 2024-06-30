@@ -13,12 +13,12 @@ const SignIn = () => {
   return (
     <div className="px-1 mt-5 flex flex-col">
       <div className="order-3 md:order-1">
-        <button className="flex items-center  text-[#08090A] px-4 py-2 border w-full border-[#8064A2] hover:bg-[#8064A2]  hover:text-white transition-all duration-300 rounded-lg text-sm md:text-base">
+        <button className="flex items-center   px-4 py-2 border w-full border-[#8064A2] hover:bg-[#8064A2]  hover:text-white transition-all duration-300 rounded-lg text-sm md:text-base">
           <Image src={googleImage} className="w-4 " alt="google_image"></Image>
           <h4 className=" font-semibold mx-auto">Continue with Google</h4>
         </button>
 
-        <button className="flex items-center text-[#08090A]   px-4 py-2 border w-full border-[#8064A2]  hover:bg-[#8064A2]  hover:text-white transition-all duration-300 rounded-lg mt-4 text-sm md:text-base">
+        <button className="flex items-center    px-4 py-2 border w-full border-[#8064A2]  hover:bg-[#8064A2]  hover:text-white transition-all duration-300 rounded-lg mt-4 text-sm md:text-base">
           <Image
             src={facebookImage}
             className="w-4 "
