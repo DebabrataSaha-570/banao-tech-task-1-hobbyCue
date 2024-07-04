@@ -17,7 +17,7 @@ const YourHobby = () => {
     >
       <Container>
         <div>
-          <h2 className="italic text-lg md:text-4xl font-normal">
+          <h2 className="italic text-2xl md:text-4xl font-normal">
             {" "}
             Your <span className="text-[#8064A2]">Hobby</span>, Your{" "}
             <span className="text-[#0096C8]">Community ...</span>{" "}
